@@ -1,15 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import Header from "./Components/Header";
+import SearchBar from "./Components/SearchBar";
+import BookList from "./Components/BookList";
+
+import BookProvider from "./Services/BookContext";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <Header />
-    </>
+    <BookProvider>
+      <div className="min-h-screen flex flex-col gap-4 sm:gap-6 md:gap-8 w-full px-4 sm:px-6 md:px-6 lg:px-8 rtl">
+        <Header />
+        <SearchBar />
+        <BookList />
+      </div>
+    </BookProvider>
   );
 }
 
