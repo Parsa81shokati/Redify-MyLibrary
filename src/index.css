@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "keen-slider/keen-slider.min.css";
+
+body {
+  @apply bg-[#c7e1ff];
+}
