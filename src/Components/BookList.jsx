@@ -19,14 +19,7 @@ function BookList() {
   console.log(hasSearch);
 
   return (
-    <div className="w-full flex flex-col gap-7 sm:gap-10 md:gap-18 mt-2 sm:mt-3 md:mt-8 px-2 ">
-      <div className="">
-        <p className="text-center sm:text-xl md:text-2xl text-sm font-bold text-blue-950 mt-3 md:mt-0 mb-3 md:mb-5">
-          Choose your favorite category
-        </p>
-        <CategoryFilter />
-      </div>
-
+    <div className="w-full flex flex-col gap-7 sm:gap-10 md:gap-18 mt-2 sm:mt-3 md:mt-15 px-2 ">
       {!hasSearch && !selectedCategory ? (
         <NewestList
           selectedBook={selectedBook}

@@ -45,9 +45,9 @@ function SearchBar() {
 
   return (
     <div className="w-full flex justify-center" ref={wrapperRef}>
-      <div className="flex flex-row justify-center items-center w-full md:max-w-6xl gap-1 sm:gap-2 md:gap-3 ">
+      <div className="flex flex-row justify-center items-center w-full flex-1 max-w-[400px] gap-1 sm:gap-2 ">
         <select
-          className="w-15 sm:w-20 md:w-27 h-6 sm:h-9 md:h-10 text-center border-none rounded-full bg-[#EDFBFF] text-gray-800 text-[8px] sm:text-[11px] md:text-sm px-1 sm:px-2 "
+          className="w-15 sm:w-20 h-6 sm:h-8 text-center border-none rounded-full bg-[#EDFBFF] text-gray-700 text-[8px] sm:text-[11px] px-1 sm:px-2 "
           value={searchType}
           onChange={(e) => setSearchType(e.target.value)}
         >
@@ -56,14 +56,14 @@ function SearchBar() {
         </select>
         <div className="relative ">
           <input
-            className=" max-w-full min-w-[200px] sm:min-w-[450px] h-6 sm:h-9 md:h-10 rounded-full border border-gray-200 bg-[#EDFBFF] pl-3 sm:pl-5 text-[9px] sm:text-xs md:text-base text-lef"
+            className=" min-w-[150px] sm:min-w-[400px] h-6 sm:h-8 rounded-full border border-gray-200 bg-[#EDFBFF] pl-3 sm:pl-5 text-[9px] sm:text-[12px] text-lef"
             type="text"
             placeholder="search here"
             value={searchText}
             onChange={(e) => SetsearchText(e.target.value)}
           />
           {suggestions.length > 0 && (
-            <div className="absolute w-full  bg-white shadow-lg rounded-xl border border-gray-200 z-50">
+            <div className="absolute w-full bg-white shadow-lg rounded-xl border border-gray-200 z-50">
               <div
                 onClick={handleExactSearch}
                 className="px-2 sm:p-3 hover:bg-gray-100 cursor-pointer font-semibold"
@@ -89,7 +89,7 @@ function SearchBar() {
           )}
         </div>
         <button onClick={handleExactSearch}>
-          <IoIosSearch className="text-sm sm:text-xl md:text-2xl text-black w-6 h-6  sm:w-10 sm:h-10 md:w-10 md:h-10 " />
+          <IoIosSearch className="text-sm sm:text-xl text-black w-6 h-6  sm:w-8 sm:h-8  " />
         </button>
       </div>
     </div>

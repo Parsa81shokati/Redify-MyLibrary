@@ -8,7 +8,12 @@ function CategoryFilter() {
   const { selectedCategory, setSelectedCategory } = useContext(BookContext);
 
   return (
-    <div className="w-full flex justify-center ">
+    <div className=" flex flex-col justify-center items-center  ">
+      <div>
+        <p className="text-center sm:text-xl md:text-3xl text-sm font-bold text-blue-950  mb-3 md:mb-12">
+          Choose your favorite category
+        </p>
+      </div>
       <div className="flex flex-row flex-nowrap gap-0.5 sm:gap-1 md:gap-2 max-w-3xl md:max-w-5xl">
         {categories.map((cat) => (
           <div key={cat.id}>

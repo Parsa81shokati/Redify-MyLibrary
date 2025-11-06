@@ -40,11 +40,14 @@ function NewestList({ setSelectedBook }) {
   );
 
   return (
-    <div className="relative bg-[#EDFBFF] rounded-2xl mx-3 mt-10 mb-10">
-      <h1 className=" text-sm sm:text-lg md:text-3xl font-sans ml-4 md:ml-8 mt-3 md:mt-6 font-bold text-blue-950 text-shadow-2xs ">
+    <div className="relative rounded-2xl mx-3 mt-10 mb-10 px-4 md:px-15">
+      <h1 className=" text-center text-sm sm:text-lg md:text-3xl font-sans ml-4 md:ml-8 mt-3 md:my-8 font-bold text-blue-950 text-shadow-2xs ">
         Newest in Readify
       </h1>
-      <div ref={sliderRef} className=" keen-slider mt-1 md:mt-3 ">
+      <div
+        ref={sliderRef}
+        className=" keen-slider mt-1 md:mt-2 border-2 border-blue-50 rounded-3xl"
+      >
         {categories.map((cat) =>
           booksByCategory[cat.category]?.map((book) => (
             <div
