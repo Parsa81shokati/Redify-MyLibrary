@@ -9,7 +9,7 @@ function NewestCard({ book, onOpen }) {
 
   return (
     <div className=" relative flex flex-col items-center w-28 sm:w-35 lg:w-40 h-50 sm:h-60 lg:h-70 border border-none rounded-2xl hover:shadow-md  transition [box-shadow:0_-4px_6px_rgba(0,0,0,0.15)] bg-gradient-to-r from-blue-100 to-blue-50 mt-5 md:mt-8 mb-4 md:mb-7 ">
-      <div className="flex justify-center overflow-hidden w-22 sm:w-25 lg:w-35 h-28 sm:h-40  mt-3 md:mt-4 ">
+      <div className="flex justify-center overflow-hidden w-22 sm:w-25 lg:w-35 h-28 sm:h-40 mt-3 md:mt-4 ">
         <img
           src={secureImage}
           alt={book?.title}

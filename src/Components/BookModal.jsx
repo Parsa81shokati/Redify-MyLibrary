@@ -46,7 +46,7 @@ function BookModal({ book, onClose }) {
             </span>
           </div>
           {book.description && (
-            <div className="overflow-y-auto px-4 sm:px-0 mt-5 md:mt-9 max-h-[200px] md:max-h-[400px] ">
+            <div className="overflow-y-auto px-2 sm:px-0 mt-5 md:mt-9 max-h-[200px] md:max-h-[400px]  ">
               <p className="font-bold text-xs md:text-lg">description :</p>
               <h3
                 className={`text-gray-600 mt-1 text-[10px] md:text-lg ${

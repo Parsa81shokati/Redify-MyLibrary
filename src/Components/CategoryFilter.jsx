@@ -10,7 +10,7 @@ function CategoryFilter() {
   return (
     <div className=" flex flex-col justify-center items-center  ">
       <div>
-        <p className="text-center sm:text-xl md:text-3xl text-sm font-bold text-blue-950 dark:text-gray-100 mb-3 md:mb-12">
+        <p className="text-center sm:text-xl md:text-3xl text-sm font-bold text-blue-950 dark:text-gray-100 mb-5 md:mb-12">
           Choose your favorite category
         </p>
       </div>

@@ -4,7 +4,7 @@ import BookList from "./Components/BookList";
 
 import BookProvider from "./Services/BookContext";
 import Hero from "./Components/Hero";
-import CategoryFilter from "./Components/CategoryFilter";
+
 import Footer from "./Components/Footer";
 
 function App() {
@@ -14,9 +14,6 @@ function App() {
         <Header />
         <div className="mt-26">
           <Hero />
-        </div>
-        <div className="mt-15 md:mt-30">
-          <CategoryFilter />
         </div>
 
         <BookList />

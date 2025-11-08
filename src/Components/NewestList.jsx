@@ -29,10 +29,16 @@ function NewestList({ setSelectedBook }) {
           loop: true,
           slides: { perView: 5.5, spacing: 15 },
           breakpoints: {
-            "(max-width: 768px)": {
+            "(max-width: 508px)": {
               slides: { perView: 2.3 },
             },
-            "(min-width: 769px)": {
+            "(min-width: 509px) and (max-width: 700px)": {
+              slides: { perView: 3 },
+            },
+            "(min-width: 700px) and (max-width: 1000px)": {
+              slides: { perView: 4.2 },
+            },
+            "(min-width: 1000px)": {
               slides: { perView: 5.5 },
             },
           },
@@ -46,7 +52,7 @@ function NewestList({ setSelectedBook }) {
 
   return (
     <div className="relative rounded-2xl mx-3 mt-10 mb-10 px-4 md:px-15">
-      <h1 className=" text-center text-sm sm:text-lg md:text-3xl font-sans ml-4 md:ml-8 mt-3 md:my-8 font-bold text-blue-950 dark:text-gray-100 text-shadow-2xs ">
+      <h1 className=" text-center text-sm sm:text-lg md:text-3xl font-sans ml-4 md:ml-8 my-3 md:my-8 font-bold text-blue-950 dark:text-gray-100 text-shadow-2xs ">
         Newest in Readify
       </h1>
       <div
@@ -65,7 +71,7 @@ function NewestList({ setSelectedBook }) {
           : Array(10)
               .fill(0)
               .map((_, i) => (
-                <div key={i} className="flex justify-center p-4">
+                <div key={i} className="flex justify-center px-3 md:px-5">
                   <NewestCardSkeleton />
                 </div>
               ))}
