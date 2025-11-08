@@ -42,7 +42,7 @@ function NewestCard({ book, onOpen }) {
           </div>
         </div>
 
-        <div className="absolute flex justify-center items-center w-10 md:w-13 lg:w-11 h-10 sm:h-10 md:h-13 lg:h-11 bg-[#c7e1ff] -bottom-3 md:-bottom-4 -right-4 md:-right-3 rounded-tl-xl ">
+        <div className="absolute flex justify-center items-center w-10 md:w-13 lg:w-11 h-10 sm:h-10 md:h-13 lg:h-11 bg-[#c7e1ff] dark:bg-[#071d34] -bottom-3 md:-bottom-4 -right-4 md:-right-3 rounded-tl-xl ">
           <button
             onClick={() => onOpen(book)}
             className="flex justify-center items-center bg-blue-50 border-blue-100 w-7 md:w-9 lg:w-8 h-7 md:h-9 lg:h-8 border border-none rounded-lg cursor-pointer hover:scale-108 transition text-base md:text-lg "

@@ -47,16 +47,20 @@ function SearchBar() {
     <div className="w-full flex justify-center" ref={wrapperRef}>
       <div className="flex flex-row justify-center items-center w-full flex-1 max-w-[400px] gap-1 sm:gap-2 ">
         <select
-          className="w-15 sm:w-20 h-6 sm:h-8 text-center border-none rounded-full bg-[#EDFBFF] text-gray-700 text-[8px] sm:text-[11px] px-1 sm:px-2 "
+          className="w-15 sm:w-20 h-6 sm:h-8 text-center border-none rounded-full bg-[#EDFBFF] text-gray-700 text-[8px] sm:text-[11px] px-1 sm:px-2 hover:scale-105 cursor-pointer "
           value={searchType}
           onChange={(e) => setSearchType(e.target.value)}
         >
-          <option value="title"> By Title</option>
-          <option value="author"> By Author</option>
+          <option value="title" className="text-left">
+            By Title
+          </option>
+          <option value="author" className="text-left">
+            By Author
+          </option>
         </select>
         <div className="relative ">
           <input
-            className=" min-w-[150px] sm:min-w-[400px] h-6 sm:h-8 rounded-full border border-gray-200 bg-[#EDFBFF] pl-3 sm:pl-5 text-[9px] sm:text-[12px] text-lef"
+            className=" min-w-[150px] sm:min-w-[400px] h-6 sm:h-8 rounded-full border border-gray-200 bg-[#EDFBFF] pl-3 sm:pl-5 text-[9px] sm:text-[12px] text-lef hover:scale-101"
             type="text"
             placeholder="search here"
             value={searchText}
@@ -68,7 +72,7 @@ function SearchBar() {
                 onClick={handleExactSearch}
                 className="px-2 sm:p-3 hover:bg-gray-100 cursor-pointer font-semibold"
               >
-                <span className="text-[9px] ">{searchText}</span>
+                <span className="text-[9px] sm:text-xs ">{searchText}</span>
               </div>
 
               {suggestions.map((book) => (
@@ -77,10 +81,10 @@ function SearchBar() {
                   onClick={() => handleSelect(book)}
                   className="px-2 py-1 sm:p-3 hover:bg-gray-100 cursor-pointer flex flex-col"
                 >
-                  <p className="text-[8px] sm:text-base font-semibold">
+                  <p className="text-[8px] sm:text-xs font-semibold">
                     {book.volumeInfo.title}
                   </p>
-                  <p className="text-[7px] sm:text-sm text-gray-500">
+                  <p className="text-[7px] sm:text-xs text-gray-500">
                     {book.volumeInfo.authors?.join(", ")}
                   </p>
                 </div>
@@ -89,7 +93,7 @@ function SearchBar() {
           )}
         </div>
         <button onClick={handleExactSearch}>
-          <IoIosSearch className="text-sm sm:text-xl text-black w-6 h-6  sm:w-8 sm:h-8  " />
+          <IoIosSearch className="text-sm sm:text-xl text-black dark:text-white w-6 h-6  sm:w-8 sm:h-8 hover:scale-110 cursor-pointer " />
         </button>
       </div>
     </div>

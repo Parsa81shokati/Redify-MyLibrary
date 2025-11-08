@@ -4,6 +4,7 @@ import fetchNewestBooks from "../Services/books";
 import { categories } from "../Services/helper";
 import NewestCard from "./NewestCard";
 import { useKeenSlider } from "keen-slider/react";
+import NewestCardSkeleton from "./NewestCardSkeleton";
 
 function NewestList({ setSelectedBook }) {
   const [booksByCategory, setBooksByCategory] = useState({});
@@ -41,23 +42,32 @@ function NewestList({ setSelectedBook }) {
 
   return (
     <div className="relative rounded-2xl mx-3 mt-10 mb-10 px-4 md:px-15">
-      <h1 className=" text-center text-sm sm:text-lg md:text-3xl font-sans ml-4 md:ml-8 mt-3 md:my-8 font-bold text-blue-950 text-shadow-2xs ">
+      <h1 className=" text-center text-sm sm:text-lg md:text-3xl font-sans ml-4 md:ml-8 mt-3 md:my-8 font-bold text-blue-950 dark:text-gray-100 text-shadow-2xs ">
         Newest in Readify
       </h1>
       <div
-        ref={sliderRef}
-        className=" keen-slider mt-1 md:mt-2 border-2 border-blue-50 rounded-3xl"
+        ref={loaded ? sliderRef : null}
+        className={`mt-1 md:mt-2 border-2 border-blue-50 rounded-3xl keen-slider`}
       >
-        {categories.map((cat) =>
-          booksByCategory[cat.category]?.map((book) => (
-            <div
-              key={book.id}
-              className="keen-slider__slide flex justify-center"
-            >
-              <NewestCard book={book.volumeInfo} onOpen={setSelectedBook} />
-            </div>
-          ))
-        )}
+        {loaded
+          ? categories.map((cat) =>
+              booksByCategory[cat.category]?.map((book) => (
+                <div
+                  key={book.id}
+                  className="keen-slider__slide flex justify-center"
+                >
+                  <NewestCard book={book.volumeInfo} onOpen={setSelectedBook} />
+                </div>
+              ))
+            )
+          : // نمایش 10 اسکلتون هنگام لود
+            Array(10)
+              .fill(0)
+              .map((_, i) => (
+                <div key={i} className="flex justify-center p-4">
+                  <NewestCardSkeleton />
+                </div>
+              ))}
       </div>
     </div>
   );

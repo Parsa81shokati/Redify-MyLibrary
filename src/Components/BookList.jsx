@@ -45,7 +45,7 @@ function BookList() {
                   />
                 ))
               ) : (
-                <div className="col-span-full flex justify-center items-center py-8 sm:py-12">
+                <div className="col-span-full flex justify-center items-center py-8 sm:py-12 dark:text-white">
                   <RiseLoader />
                 </div>
               )
@@ -59,7 +59,7 @@ function BookList() {
                   />
                 ))
               ) : (
-                <div className="col-span-full flex justify-center items-center py-8 sm:py-12">
+                <div className="col-span-full flex justify-center items-center py-8 sm:py-12 drk:text-white">
                   <RiseLoader />
                 </div>
               )

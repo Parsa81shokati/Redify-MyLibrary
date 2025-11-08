@@ -5,6 +5,7 @@ import BookList from "./Components/BookList";
 import BookProvider from "./Services/BookContext";
 import Hero from "./Components/Hero";
 import CategoryFilter from "./Components/CategoryFilter";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
         <div className="mt-15 md:mt-30">
           <CategoryFilter />
         </div>
+
         <BookList />
+        <Footer />
       </div>
     </BookProvider>
   );
