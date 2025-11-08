@@ -47,7 +47,7 @@ function SearchBar() {
     <div className="w-full flex justify-center" ref={wrapperRef}>
       <div className="flex flex-row justify-center items-center w-full flex-1 max-w-[400px] gap-1 sm:gap-2 ">
         <select
-          className="w-15 sm:w-20 h-6 sm:h-8 text-center border-none rounded-full bg-[#EDFBFF] text-gray-700 text-[8px] sm:text-[11px] px-1 sm:px-2 hover:scale-105 cursor-pointer "
+          className="w-15 sm:w-20 h-6 sm:h-8 text-center border-none rounded-full bg-[#EDFBFF] text-gray-700 text-[8px] mt-1 sm:mt-0 sm:text-[11px] px-1 sm:px-2 hover:scale-105 cursor-pointer "
           value={searchType}
           onChange={(e) => setSearchType(e.target.value)}
         >
@@ -60,7 +60,7 @@ function SearchBar() {
         </select>
         <div className="relative ">
           <input
-            className=" min-w-[150px] sm:min-w-[400px] h-6 sm:h-8 rounded-full border border-gray-200 bg-[#EDFBFF] pl-3 sm:pl-5 text-[9px] sm:text-[12px] text-lef hover:scale-101"
+            className=" min-w-[130px] sm:min-w-[400px] h-6 sm:h-8 rounded-full border border-gray-200 bg-[#EDFBFF] pl-3 sm:pl-5 text-[9px] sm:text-[12px] text-lef hover:scale-101"
             type="text"
             placeholder="search here"
             value={searchText}

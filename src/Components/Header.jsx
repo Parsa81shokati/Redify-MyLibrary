@@ -15,7 +15,7 @@ function Header() {
       <div className="flex-grow">
         <SearchBar />
       </div>
-      <ThemeToggle />{" "}
+      <ThemeToggle />
     </div>
   );
 }

@@ -45,7 +45,7 @@ function BookCard({ book, onOpen }) {
           </div>
         </div>
 
-        <div className="  absolute flex justify-center items-center w-10  md:w-13 lg:w-14 h-10 sm:h-10 md:h-13 lg:h-14 bg-[#c7e1ff] dark:bg-[#071d34] -bottom-3 -right-3 rounded-tl-lg ">
+        <div className="  absolute flex justify-center items-center w-10  md:w-13 lg:w-14 h-10 sm:h-10 md:h-13 lg:h-14 bg-[#c7e1ff] dark:bg-[#071d34] transition-colors duration-500 -bottom-3 -right-3 rounded-tl-lg ">
           <button
             onClick={() => onOpen(book)}
             className="flex justify-center items-center bg-white w-7 md:w-9 lg:w-10 h-7 md:h-9 lg:h-10 border border-none rounded-lg cursor-pointer hover:scale-108  transition text-base md:text-lg lg:text-2xl"

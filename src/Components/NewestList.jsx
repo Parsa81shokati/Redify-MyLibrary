@@ -40,6 +40,10 @@ function NewestList({ setSelectedBook }) {
       : null
   );
 
+  const allBooks = categories.flatMap(
+    (cat) => booksByCategory[cat.category] || []
+  );
+
   return (
     <div className="relative rounded-2xl mx-3 mt-10 mb-10 px-4 md:px-15">
       <h1 className=" text-center text-sm sm:text-lg md:text-3xl font-sans ml-4 md:ml-8 mt-3 md:my-8 font-bold text-blue-950 dark:text-gray-100 text-shadow-2xs ">
@@ -49,19 +53,16 @@ function NewestList({ setSelectedBook }) {
         ref={loaded ? sliderRef : null}
         className={`mt-1 md:mt-2 border-2 border-blue-50 rounded-3xl keen-slider`}
       >
-        {loaded
-          ? categories.map((cat) =>
-              booksByCategory[cat.category]?.map((book) => (
-                <div
-                  key={book.id}
-                  className="keen-slider__slide flex justify-center"
-                >
-                  <NewestCard book={book.volumeInfo} onOpen={setSelectedBook} />
-                </div>
-              ))
-            )
-          : // نمایش 10 اسکلتون هنگام لود
-            Array(10)
+        {allBooks.length > 0
+          ? allBooks.map((book) => (
+              <div
+                key={book.id}
+                className="keen-slider__slide flex justify-center"
+              >
+                <NewestCard book={book.volumeInfo} onOpen={setSelectedBook} />
+              </div>
+            ))
+          : Array(10)
               .fill(0)
               .map((_, i) => (
                 <div key={i} className="flex justify-center p-4">

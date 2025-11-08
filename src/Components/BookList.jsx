@@ -14,9 +14,7 @@ function BookList() {
   const { selectedCategory, books, searchQuery, searchbooks } =
     useContext(BookContext);
 
-  console.log(searchbooks);
   const hasSearch = searchQuery && searchQuery.text.trim() !== "";
-  console.log(hasSearch);
 
   return (
     <div className="w-full flex flex-col gap-7 sm:gap-10 md:gap-18 mt-2 sm:mt-3 md:mt-15 px-2 ">
@@ -45,7 +43,7 @@ function BookList() {
                   />
                 ))
               ) : (
-                <div className="col-span-full flex justify-center items-center py-8 sm:py-12 dark:text-white">
+                <div className="col-span-full flex justify-center items-center py-8 sm:py-12">
                   <RiseLoader />
                 </div>
               )

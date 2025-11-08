@@ -8,7 +8,7 @@ function BookModal({ book, onClose }) {
     : "/no-cover-avalible.png";
   return (
     <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm z-50 ">
-      <div className="relative bg-white w-[300px] sm:w-[500px] md:w-[900px] md:max-h-[80vh] py-3 rounded-lg md:rounded-xl shadow-lg flex flex-col sm:flex-row overflow-hidden">
+      <div className="relative bg-white w-[300px] sm:w-[500px] md:w-[900px]  md:max-h-[80vh] py-3 rounded-lg md:rounded-xl shadow-lg flex flex-col sm:flex-row overflow-hidden">
         <div className="flex justify-center mt-3 sm:mt-4">
           <img
             src={secureImage}
@@ -31,7 +31,12 @@ function BookModal({ book, onClose }) {
 
           <div className="flex justify-center sm:justify-start mt-1 md:mt-2 ">
             <p className="font-bold text-xs md:text-lg mr-2">author :</p>
-            <span className=" text-xs md:text-lg">{book.authors}</span>
+            <span className=" text-xs md:text-lg">
+              {book.authors
+                ? book.authors.slice(0, 2).join(", ") +
+                  (book.authors.length > 2 ? "..." : "")
+                : "Unknown"}
+            </span>
           </div>
 
           <div className="flex justify-center sm:justify-start md:mt-2  ">
@@ -41,7 +46,7 @@ function BookModal({ book, onClose }) {
             </span>
           </div>
           {book.description && (
-            <div className="overflow-y-auto px-4 sm:px-0 mt-5 md:mt-9 ">
+            <div className="overflow-y-auto px-4 sm:px-0 mt-5 md:mt-9 max-h-[200px] md:max-h-[400px] ">
               <p className="font-bold text-xs md:text-lg">description :</p>
               <h3
                 className={`text-gray-600 mt-1 text-[10px] md:text-lg ${
