@@ -2,7 +2,7 @@ import api, { apiKey } from "./config";
 
 
 
-const fetchNewestBooks=async(category, page = 1, pageSize = 10)=>{
+const fetchNewestBooks=async(category, page = 1, pageSize = 12)=>{
     try{
        const startIndex = (page - 1) * pageSize;
         const res= await api.get(
@@ -19,7 +19,7 @@ const fetchNewestBooks=async(category, page = 1, pageSize = 10)=>{
 }
 export default fetchNewestBooks
 
-export const fetchBooks = async (query, type = "title",page, pageSize = 10) => {
+export const fetchBooks = async (query, type = "title",page, pageSize = 12) => {
   try {
      const startIndex = (page - 1) * pageSize;
     let q = "";

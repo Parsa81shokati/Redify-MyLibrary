@@ -13,7 +13,7 @@ function BookProvider({ children }) {
   useEffect(() => {
     setBooks([]);
     async function fetchBook() {
-      const res = await fetchNewestBooks(selectedCategory, page, 12);
+      const res = await fetchNewestBooks(selectedCategory, page, 9);
       setBooks(res);
     }
 
@@ -30,7 +30,7 @@ function BookProvider({ children }) {
         searchQuery.text,
         searchQuery.type,
         page,
-        10
+        9
       );
       setSearchBooks(results);
     }, 400);
