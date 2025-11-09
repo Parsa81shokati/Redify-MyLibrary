@@ -13,6 +13,10 @@ A responsive online library web application that allows users to explore and sea
 > ⚠️ **توجه:**  
 > به دلیل محدودیت‌های API، برای دریافت داده‌ها ممکن است نیاز به **VPN** داشته باشید.
 
+> ⚠️ **Note:**  
+> Due to API access restrictions, this project may require a **VPN** to fetch data successfully.  
+> If the content does not load, please enable a VPN and try again.
+
 
 #### 🎬 Demo:
 - Live Demo: _https://readify-library.netlify.app/_
