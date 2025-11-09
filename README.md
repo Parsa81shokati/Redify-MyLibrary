@@ -10,6 +10,10 @@ A responsive online library web application that allows users to explore and sea
 - Global state management using **Context API**
 - Responsive and interactive UI including **Book Cards** and **Modal** components
 
+> ⚠️ **توجه:**  
+> به دلیل محدودیت‌های API، برای دریافت داده‌ها ممکن است نیاز به **VPN** داشته باشید.
+
+
 #### 🎬 Demo:
 - Live Demo: _https://readify-library.netlify.app/_
 
