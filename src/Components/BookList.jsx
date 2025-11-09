@@ -47,7 +47,13 @@ function BookList() {
             ))
           ) : (
             <div className="col-span-full flex justify-center items-center py-8 sm:py-12">
-              <RiseLoader />
+              <RiseLoader
+                color={
+                  document.documentElement.classList.contains("dark")
+                    ? "#fff"
+                    : "#071d34"
+                }
+              />
             </div>
           )
         ) : selectedCategory ? (
@@ -61,7 +67,13 @@ function BookList() {
             ))
           ) : (
             <div className="col-span-full flex justify-center items-center py-8 sm:py-12 drk:text-white">
-              <RiseLoader />
+              <RiseLoader
+                color={
+                  document.documentElement.classList.contains("dark")
+                    ? "#fff"
+                    : "#071d34"
+                }
+              />
             </div>
           )
         ) : (
